@@ -1,0 +1,56 @@
+.content {
+  font: 800 14.5em/1 'Open Sans', Impact;
+}
+
+.text--transparent {
+  fill: transparent;
+}
+
+.anim-shape {
+  transform-origin: 50% 50%;
+  transform: scale(0, 1) translate(0, 0);
+  animation: moving-panel 3s infinite alternate;
+}
+
+.colortext .anim-shape:nth-child(1) {
+  fill: #1e1e1f;
+}
+
+.colortext .anim-shape:nth-child(2) {
+  fill: #494b4b;
+}
+
+.colortext .anim-shape:nth-child(3) {
+  fill: #616463;
+}
+
+.colortext .anim-shape:nth-child(4) {
+  fill: #949392;
+}
+
+.colortext .anim-shape:nth-child(5) {
+  fill: #b8b6b5;
+}
+
+.shadow {
+  transform: translate(10px, 10px);
+}
+
+.anim-shape--shadow {
+  fill: #000;
+  fill-opacity: 0.2;
+}
+
+@keyframes moving-panel {
+  100% {
+    transform: scale(1, 1) translate(20px, 0);
+  }
+}
+
+svg {
+  width: 100%;
+  margin: 300px auto;
+  display: block;
+  text-transform: uppercase;
+  transform: rotate(-30deg);
+}

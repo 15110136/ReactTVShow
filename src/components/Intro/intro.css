@@ -1,0 +1,17 @@
+.App-intro {
+  color: #333;
+  letter-spacing: -5px;
+  margin-left: -16px;
+  font-weight: 800;
+  color: transparent;
+  font-size: 100px;
+  background: url("https://download.unsplash.com/uploads/14116941824817ba1f28e/78c8dff1") repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 90px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
