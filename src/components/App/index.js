@@ -6,29 +6,27 @@ import Header from '../Header/Header';
 class App extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
-      showname1: '',
-      showname2: '',
-      type: '',
-      summary: '',
-      image: ''
+      series: [],
+      seriesName: '',
+      show: 'avenger'
     }
   }
 
-  setInfo = () => {
-    
+  componentDidMount() {
+    fetch(`http://api.tvmaze.com/search/shows?q=${this.state.show}`)
+      .then(response => response.json())
+      .then(json => {
+        this.setState({ series: json });
+      });
   }
-  componentWillMount() {
-
-  }
-
 
   render() {
+    const { series} = this.state;
     return (
       <div className="App">
         <header className="App-header">
-          <Header onReciveInfo={this.setInfo} />
+          <Header list={series}/>
         </header>
         <Main />
       </div>

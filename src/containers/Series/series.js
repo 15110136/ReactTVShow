@@ -22,6 +22,7 @@ export default class series extends Component {
 
   render() {
     const { series, seriesName, isFetch } = this.state;
+    
     return (
       <div className="series">
         <Intro mess="Search TV shows" />
@@ -46,7 +47,7 @@ export default class series extends Component {
             !isFetch && <SeriesList list={series} />
           }
         </div>
-        {/* <EffectBackGround /> */}
+        <EffectBackGround />
       </div>
     )
   }

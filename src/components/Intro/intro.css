@@ -1,7 +1,6 @@
 .App-intro {
   color: #333;
   letter-spacing: -5px;
-  margin-left: -16px;
   font-weight: 800;
   color: transparent;
   font-size: 100px;
@@ -13,5 +12,5 @@
   text-align: center;
   line-height: 90px;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
