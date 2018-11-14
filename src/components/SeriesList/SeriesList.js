@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const SeriesListItem = ({seri}) =>(
   <li>
-    <Link to={`/series/${seri.show.id}`}>
+    <Link to={`/series/${seri.show.id}`} className="linkSeriesitem">
       {seri.show.name}
     </Link>
   </li>

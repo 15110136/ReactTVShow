@@ -1,3 +1,6 @@
 .series-list{
   padding: 0px;
 }
+.linkSeriesitem{
+  text-decoration: none;
+}
