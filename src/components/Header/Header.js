@@ -28,7 +28,7 @@ export default class Header extends Component {
 
         return (
           <div className="section" style={divStyle} key={index}>
-            <Link to={`/series/${seri.show.id}`} id={seri.show.id}>
+            <Link to={`/series/${seri.show.id}`}>
               <div className="cont_title">
                 <h1>{seri.show.name}</h1>
                 <h3>{seri.show.type}</h3>

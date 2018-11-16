@@ -1,7 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Loader from '../../components/Loader/Loader';
-import { Link } from 'react-router-dom'
-import './singleseries.css'
+import { Link } from 'react-router-dom';
+import './singleseries.css';
+import renderHTML from 'react-render-html';
+import homeIcon from '../../assets/home2.svg';
+import ReadMoreReact from 'read-more-react';
+import "../../../node_modules/video-react/dist/video-react.css";
+import { Player, BigPlayButton } from 'video-react';
 
 export default class singleseries extends Component {
   state = {
@@ -21,7 +26,7 @@ export default class singleseries extends Component {
         }
       });
   }
-  componentWillUpdate() {
+  componentDidUpdate() {
     this.mounted = true;
 
     const { id } = this.props.match.params;
@@ -39,7 +44,6 @@ export default class singleseries extends Component {
     this.mounted = false;
   }
   onHandleStyle = (show) => {
-    // console.log(show.image.original);
     return {
       background: 'url(' + show.image.original + ')' + ',' + 'linear-gradient(rgba(0, 0, 0, 0.5)' + ',' + 'rgba(0, 0, 0, 0.5)',
       backgroundBlendMode: 'darken',
@@ -51,8 +55,15 @@ export default class singleseries extends Component {
   }
   render() {
     const { show } = this.state;
-    const Premiered = (show) => {
-      return show.summary;
+
+    const Rating = ({ s }) => {
+      if (s.rating !== null && s.rating.average !== null) {
+        return (
+          <p className='rating'>Rating: {s.rating.average} </p>
+        )
+      } else {
+        return null;
+      }
     }
     return (
       <div className="singleSeries">
@@ -63,15 +74,22 @@ export default class singleseries extends Component {
             <div className="info">
               <h2>{show.name}</h2>
               <p className="premiered">{show.premiered}</p>
-              <p className="summary">{show.summary}</p>
+              <ReadMoreReact text={show.summary} min={80} max={200} ideal={100} />
+              {/* <div className="summary">{renderHTML(show.summary)}</div> */}
+              <Rating s={show} />
             </div>
           </div>
         }
         <div className="back_btn">
           <Link to='/' className='backhome'>
-          Back to HOME Page
+            <img src={homeIcon} alt='homeLogo' style={{ width: 35 + 'px', color: 'white' }} />
           </Link>
         </div>
+
+        
+        <Player preload="hidden" playsInline src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" >
+          <BigPlayButton position="center"/>
+        </Player>
 
       </div>
     )

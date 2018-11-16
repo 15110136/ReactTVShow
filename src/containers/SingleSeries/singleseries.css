@@ -1,14 +1,24 @@
 .backhome {
   text-decoration: none;
+  color: white;
+  font-weight: 700;
+  margin: auto;
+  transition: all 0.3s;
 }
-.back_btn{
+
+.backhome:hover {
+  transform: scale(1.2);
+}
+
+.back_btn {
   position: fixed;
   height: 80px;
   width: 80px;
-  background-color: #bbb;
+  background-color: #42d43d;
   border-radius: 50%;
   bottom: 10%;
   right: 3%;
+  display: flex;
 }
 
 .singleSeries {
@@ -20,6 +30,10 @@
 .singleSeries>.contentSingleSeries {
   display: flex;
   flex-direction: row;
+  transition: all 0.3s;
+}
+.singleSeries>.contentSingleSeries:hover{
+  transform: scale(1.01);
 }
 
 .singleSeries>.contentSingleSeries>.info {
@@ -42,15 +56,38 @@
   font-size: 30px;
   font-weight: 700;
   position: absolute;
-  top: 40%;
+  top: 42%;
   transform: translate(80%, 70%);
 }
 
-.singleSeries>.contentSingleSeries>.info>.summary {
+.singleSeries>.contentSingleSeries>.info>.display-text-group {
   color: white;
   position: absolute;
   width: 40%;
   font-size: 20px;
-  top: 50%;
+  top: 54%;
   transform: translate(14%);
+}
+
+.singleSeries>.contentSingleSeries>.info>.summary{
+  color: white;
+  position: absolute;
+  width: 40%;
+  font-size: 20px;
+  top: 54%;
+  transform: translate(14%);
+}
+
+.singleSeries>.contentSingleSeries>.info>.rating {
+
+  color: white;
+  position: absolute;
+  top: 42%;
+  left: 20%;
+  transform: translate(80%, 70%);
+  font-size: 30px;
+  transition: all 0.3s;
+}
+.singleSeries>.contentSingleSeries>.info>.rating:hover{
+  color: rgb(250, 196, 19);
 }
