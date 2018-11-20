@@ -22,7 +22,6 @@ export default class Header extends Component {
             backgroundBlendMode: 'darken',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-
           };
         }
 

@@ -32,7 +32,8 @@
   flex-direction: row;
   transition: all 0.3s;
 }
-.singleSeries>.contentSingleSeries:hover{
+
+.singleSeries>.contentSingleSeries:hover {
   transform: scale(1.01);
 }
 
@@ -69,7 +70,7 @@
   transform: translate(14%);
 }
 
-.singleSeries>.contentSingleSeries>.info>.summary{
+.singleSeries>.contentSingleSeries>.info>.summary {
   color: white;
   position: absolute;
   width: 40%;
@@ -88,6 +89,12 @@
   font-size: 30px;
   transition: all 0.3s;
 }
-.singleSeries>.contentSingleSeries>.info>.rating:hover{
+
+.singleSeries>.contentSingleSeries>.info>.rating:hover {
   color: rgb(250, 196, 19);
+}
+
+.video {
+  position: absolute;
+  transform: translate(2.5%);
 }

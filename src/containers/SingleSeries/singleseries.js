@@ -5,8 +5,7 @@ import './singleseries.css';
 import renderHTML from 'react-render-html';
 import homeIcon from '../../assets/home2.svg';
 import ReadMoreReact from 'read-more-react';
-import "../../../node_modules/video-react/dist/video-react.css";
-import { Player, BigPlayButton } from 'video-react';
+import ReactPlayer from 'react-player'
 
 export default class singleseries extends Component {
   state = {
@@ -25,6 +24,7 @@ export default class singleseries extends Component {
           this.mounted = false;
         }
       });
+
   }
   componentDidUpdate() {
     this.mounted = true;
@@ -38,8 +38,9 @@ export default class singleseries extends Component {
           this.mounted = false;
         }
       });
-
+    console.log(this.state.show);
   }
+
   componentWillUnmount() {
     this.mounted = false;
   }
@@ -85,12 +86,7 @@ export default class singleseries extends Component {
             <img src={homeIcon} alt='homeLogo' style={{ width: 35 + 'px', color: 'white' }} />
           </Link>
         </div>
-
-        
-        <Player preload="hidden" playsInline src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" >
-          <BigPlayButton position="center"/>
-        </Player>
-
+        <ReactPlayer className="video" url='https://www.youtube.com/watch?v=aGJ3Jhb7i88' controls muted height="100vh" width="95%" />
       </div>
     )
   }
