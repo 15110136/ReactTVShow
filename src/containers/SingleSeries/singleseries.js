@@ -24,7 +24,6 @@ export default class singleseries extends Component {
           this.mounted = false;
         }
       });
-
   }
   componentDidUpdate() {
     this.mounted = true;
