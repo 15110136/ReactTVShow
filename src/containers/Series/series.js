@@ -4,6 +4,7 @@ import Loader from '../../components/Loader/Loader'
 import Intro from '../../components/Intro/Intro'
 import './series.css'
 import EffectBackGround from '../../components/EffectBackground/EffectBackGround';
+import HomeButton from '../../components/HomeButton/HomeButton';
 
 
 export default class series extends Component {
@@ -25,6 +26,7 @@ export default class series extends Component {
     
     return (
       <div className="series">
+      <HomeButton/>
         <Intro mess="Search TV shows" />
 
         <div>

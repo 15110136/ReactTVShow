@@ -84,7 +84,7 @@ export default class singleseries extends Component {
         }
         <div className="back_btn">
           <Link to='/' className='backhome'>
-            <img src={homeIcon} alt='homeLogo' style={{ width: 35 + 'px', color: 'white' }} />
+            <img src={homeIcon} alt='homeLogo' style={{ width: 35 + 'px', color: 'white' }} importance="low" />
           </Link>
         </div>
         <ReactPlayer className="video" url='https://www.youtube.com/watch?v=aGJ3Jhb7i88' controls muted height="100vh" width="95%" />
