@@ -8,11 +8,13 @@ import ReadMoreReact from 'read-more-react';
 import ReactPlayer from 'react-player'
 
 export default class singleseries extends Component {
-  state = {
-    show: null
-  }
-
-  componentWillMount() {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      
+      show: null
+    }
     this.mounted = true;
     const { id } = this.props.match.params;
 
@@ -25,6 +27,7 @@ export default class singleseries extends Component {
         }
       });
   }
+  
   componentDidUpdate() {
     this.mounted = true;
 
@@ -37,7 +40,6 @@ export default class singleseries extends Component {
           this.mounted = false;
         }
       });
-    console.log(this.state.show);
   }
 
   componentWillUnmount() {
